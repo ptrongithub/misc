@@ -1,0 +1,87 @@
+Performing C++ SOURCE FILE Test HAVE_IS_SAME failed with the following output:
+Change Dir: E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe cmTC_772c1/fast && E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_772c1.dir\build.make CMakeFiles/cmTC_772c1.dir/build
+
+mingw32-make.exe[1]: Entering directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+Building CXX object CMakeFiles/cmTC_772c1.dir/src.cxx.obj
+
+E:\Apps\mingw-w64\mingw64\bin\g++.exe    -DHAVE_IS_SAME  -std=c++11   -o CMakeFiles\cmTC_772c1.dir\src.cxx.obj -c E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx
+
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:11: error: '::main' must return 'int'
+ void main() { return is_same<bool,char>::value; }
+           ^
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx: In function 'int main()':
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:22: error: 'is_same' was not declared in this scope
+ void main() { return is_same<bool,char>::value; }
+                      ^~~~~~~
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:30: error: expected primary-expression before 'bool'
+ void main() { return is_same<bool,char>::value; }
+                              ^~~~
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:30: error: expected ';' before 'bool'
+ void main() { return is_same<bool,char>::value; }
+                              ^~~~
+                              ;
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:34: error: expected unqualified-id before ',' token
+ void main() { return is_same<bool,char>::value; }
+                                  ^
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\src.cxx:1:35: error: expected unqualified-id before 'char'
+ void main() { return is_same<bool,char>::value; }
+                                   ^~~~
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_772c1.dir\build.make:68: CMakeFiles/cmTC_772c1.dir/src.cxx.obj] Error 1
+
+mingw32-make.exe[1]: Leaving directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+mingw32-make.exe: *** [Makefile:123: cmTC_772c1/fast] Error 2
+
+
+
+Source file was:
+void main() { return is_same<bool,char>::value; }
+Determining if the include file sys/endian.h exists failed with the following output:
+Change Dir: E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe cmTC_9083a/fast && E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_9083a.dir\build.make CMakeFiles/cmTC_9083a.dir/build
+
+mingw32-make.exe[1]: Entering directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+Building C object CMakeFiles/cmTC_9083a.dir/CheckIncludeFile.c.obj
+
+E:\Apps\mingw-w64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_9083a.dir\CheckIncludeFile.c.obj   -c E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: sys/endian.h: No such file or directory
+ #include <sys/endian.h>
+          ^~~~~~~~~~~~~~
+compilation terminated.
+
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_9083a.dir\build.make:68: CMakeFiles/cmTC_9083a.dir/CheckIncludeFile.c.obj] Error 1
+
+mingw32-make.exe[1]: Leaving directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+mingw32-make.exe: *** [Makefile:123: cmTC_9083a/fast] Error 2
+
+
+
+
+Determining if the include file sys/byteorder.h exists failed with the following output:
+Change Dir: E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp
+
+Run Build Command(s):E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe cmTC_0b24d/fast && E:/Apps/mingw-w64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_0b24d.dir\build.make CMakeFiles/cmTC_0b24d.dir/build
+
+mingw32-make.exe[1]: Entering directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+Building C object CMakeFiles/cmTC_0b24d.dir/CheckIncludeFile.c.obj
+
+E:\Apps\mingw-w64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_0b24d.dir\CheckIncludeFile.c.obj   -c E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+
+E:\cpp\Lib\MySQL\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:10: fatal error: sys/byteorder.h: No such file or directory
+ #include <sys/byteorder.h>
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_0b24d.dir\build.make:68: CMakeFiles/cmTC_0b24d.dir/CheckIncludeFile.c.obj] Error 1
+
+mingw32-make.exe[1]: Leaving directory 'E:/cpp/Lib/MySQL/CMakeFiles/CMakeTmp'
+
+mingw32-make.exe: *** [Makefile:123: cmTC_0b24d/fast] Error 2
