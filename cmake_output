@@ -1,0 +1,138 @@
+e:\cpp\Lib\MySQL>cmake -G "MinGW Makefiles"
+CMake Warning:
+  No source or binary directory provided.  Both will be assumed to be the
+  same as the current working directory, but note that this warning will
+  become a fatal error in future CMake releases.
+
+
+-- The C compiler identification is GNU 8.1.0
+-- The CXX compiler identification is GNU 8.1.0
+-- Check for working C compiler: E:/Apps/mingw-w64/mingw64/bin/gcc.exe
+-- Check for working C compiler: E:/Apps/mingw-w64/mingw64/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: E:/Apps/mingw-w64/mingw64/bin/g++.exe
+-- Check for working CXX compiler: E:/Apps/mingw-w64/mingw64/bin/g++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+Building version 8.0.20
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- BIG_ENDIAN: 0
+Building on system: Windows-10.0.18362 (AMD64)
+Using cmake generator: MinGW Makefiles
+Using toolset:
+Building 64bit code
+Building shared connector library
+Configuring CDK as part of MySQL_CONCPP project
+-- Looking for SSL library.
+CMake Error at cdk/cmake/DepFindSSL.cmake:79 (message):
+  Cannot find appropriate system libraries for SSL.  Make sure you've
+  specified a supported SSL version.  Consult the documentation for WITH_SSL
+  alternatives
+Call Stack (most recent call first):
+  cdk/cmake/DepFindSSL.cmake:346 (main)
+  cdk/cmake/dependency.cmake:42 (include)
+  cdk/CMakeLists.txt:96 (find_dependency)
+
+
+-- Setting up Protobuf.
+==== Configuring Protobuf build using cmake generator: MinGW Makefiles
+-- The C compiler identification is GNU 8.1.0
+-- The CXX compiler identification is GNU 8.1.0
+-- Check for working C compiler: E:/Apps/mingw-w64/mingw64/bin/gcc.exe
+-- Check for working C compiler: E:/Apps/mingw-w64/mingw64/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: E:/Apps/mingw-w64/mingw64/bin/g++.exe
+-- Check for working CXX compiler: E:/Apps/mingw-w64/mingw64/bin/g++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- BIG_ENDIAN: 0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+Using pthreads for protobuf code
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/cpp/Lib/MySQL/cdk/protobuf
+==== Protobuf build configured.
+Processor Count: 8
+-- Setting up RapidJSON.
+Skipping second declaration of config option: THROW_AS_ASSERT (found in: E:/cpp/Lib/MySQL/cdk/CMakeLists.txt)
+-- Performing Test HAVE_STATIC_ASSERT
+-- Performing Test HAVE_STATIC_ASSERT - Success
+-- Performing Test HAVE_IS_SAME
+-- Performing Test HAVE_IS_SAME - Failed
+-- Check size of off64_t
+-- Check size of off64_t - done
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- ZSTD_LEGACY_SUPPORT not defined!
+-- Performing Test HAVE_SHARED_PTR
+-- Performing Test HAVE_SHARED_PTR - Success
+-- Performing Test HAVE_SYSTEM_ERROR
+-- Performing Test HAVE_SYSTEM_ERROR - Success
+-- Check size of wchar_t
+-- Check size of wchar_t - done
+-- Looking for sys/endian.h
+-- Looking for sys/endian.h - not found
+-- Looking for sys/byteorder.h
+-- Looking for sys/byteorder.h - not found
+Wrote configuration header: E:/cpp/Lib/MySQL/cdk/include/mysql/cdk/config.h
+Preparing to merge SHARED library: connector (xapi;devapi)
+Connector library name: mysqlcppconn8-2
+Building version 8.0.20
+Generating INFO_SRC
+Generating INFO_BIN
+Install location: C:/Users/jvines/MySQL/MySQL Connector C++
+Connector libraries will be installed at: lib64
+
+Project configuration options:
+
+: BUILD_STATIC: OFF
+Build static version of connector library
+
+: WITH_SSL: system
+Either 'system' to use system-wide OpenSSL library, or custom OpenSSL location. (default : system)
+
+: WITH_JDBC: OFF
+Whether to build a variant of connector library which implements legacy JDBC API
+
+-- Configuring incomplete, errors occurred!
+See also "E:/cpp/Lib/MySQL/CMakeFiles/CMakeOutput.log".
+See also "E:/cpp/Lib/MySQL/CMakeFiles/CMakeError.log".
