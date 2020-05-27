@@ -1,0 +1,105 @@
+e:\cpp\Lib\MySQL\src> mingw32-make
+Scanning dependencies of target uuid_gen
+[  1%] Building CXX object uuid/src/CMakeFiles/uuid_gen.dir/uuid_gen.cc.obj
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:44:26: error: conflicting declaration 'typedef CRITICAL_SECTION pthread_mutex_t'
+   44 | typedef CRITICAL_SECTION pthread_mutex_t;
+      |                          ^~~~~~~~~~~~~~~
+In file included from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/ext/atomicity.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/bits/basic_string.h:39,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/string:55,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/stdexcept:39,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:40:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/pthread.h:269:18: note: previous declaration as 'typedef intptr_t pthread_mutex_t'
+  269 | typedef intptr_t pthread_mutex_t;
+      |                  ^~~~~~~~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:45:17: error: conflicting declaration 'typedef DWORD pthread_t'
+   45 | typedef DWORD   pthread_t;
+      |                 ^~~~~~~~~
+In file included from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/ext/atomicity.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/bits/basic_string.h:39,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/string:55,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/stdexcept:39,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:40:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/pthread.h:196:19: note: previous declaration as 'typedef uintptr_t pthread_t'
+  196 | typedef uintptr_t pthread_t;
+      |                   ^~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:49:3: error: conflicting declaration 'typedef struct thread_attr pthread_attr_t'
+   49 | } pthread_attr_t;
+      |   ^~~~~~~~~~~~~~
+In file included from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/ext/atomicity.h:35,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/bits/basic_string.h:39,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/string:55,
+                 from E:/Apps/msys64/mingw64/include/c++/10.1.0/stdexcept:39,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:40:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/pthread.h:251:31: note: previous declaration as 'typedef struct pthread_attr_t pthread_attr_t'
+  251 | typedef struct pthread_attr_t pthread_attr_t;
+      |                               ^~~~~~~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc: In function 'void init_uuid()':
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:169:22: error: cannot convert 'pthread_mutex_t*' {aka 'long long int*'} to 'LPCRITICAL_SECTION' {aka '_RTL_CRITICAL_SECTION*'}
+  169 |   pthread_mutex_init(&LOCK_uuid_generator, MY_MUTEX_INIT_FAST);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      pthread_mutex_t* {aka long long int*}
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:53:61: note: in definition of macro 'pthread_mutex_init'
+   53 | #define pthread_mutex_init(A,B)  (InitializeCriticalSection(A),0)
+      |                                                             ^
+In file included from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/winbase.h:35,
+                 from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/windows.h:70,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:34:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/synchapi.h:112:72: note:   initializing argument 1 of 'void InitializeCriticalSection(LPCRITICAL_SECTION)'
+  112 |   WINBASEAPI VOID WINAPI InitializeCriticalSection (LPCRITICAL_SECTION lpCriticalSection);
+      |                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc: In function 'void deinit_uuid()':
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:198:25: error: cannot convert 'pthread_mutex_t*' {aka 'long long int*'} to 'LPCRITICAL_SECTION' {aka '_RTL_CRITICAL_SECTION*'}
+  198 |   pthread_mutex_destroy(&LOCK_uuid_generator);
+      |                         ^~~~~~~~~~~~~~~~~~~~
+      |                         |
+      |                         pthread_mutex_t* {aka long long int*}
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:57:57: note: in definition of macro 'pthread_mutex_destroy'
+   57 | #define pthread_mutex_destroy(A) (DeleteCriticalSection(A), 0)
+      |                                                         ^
+In file included from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/winbase.h:35,
+                 from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/windows.h:70,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:34:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/synchapi.h:46:68: note:   initializing argument 1 of 'void DeleteCriticalSection(LPCRITICAL_SECTION)'
+   46 |   WINBASEAPI VOID WINAPI DeleteCriticalSection (LPCRITICAL_SECTION lpCriticalSection);
+      |                                                 ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc: In constructor 'Uuid_guard::Uuid_guard()':
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:229:24: error: cannot convert 'pthread_mutex_t*' {aka 'long long int*'} to 'LPCRITICAL_SECTION' {aka '_RTL_CRITICAL_SECTION*'}
+  229 |     pthread_mutex_lock(&LOCK_uuid_generator);
+      |                        ^~~~~~~~~~~~~~~~~~~~
+      |                        |
+      |                        pthread_mutex_t* {aka long long int*}
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:54:54: note: in definition of macro 'pthread_mutex_lock'
+   54 | #define pthread_mutex_lock(A)  (EnterCriticalSection(A),0)
+      |                                                      ^
+In file included from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/winbase.h:35,
+                 from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/windows.h:70,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:34:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/synchapi.h:43:67: note:   initializing argument 1 of 'void EnterCriticalSection(LPCRITICAL_SECTION)'
+   43 |   WINBASEAPI VOID WINAPI EnterCriticalSection (LPCRITICAL_SECTION lpCriticalSection);
+      |                                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc: In destructor 'Uuid_guard::~Uuid_guard()':
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:234:26: error: cannot convert 'pthread_mutex_t*' {aka 'long long int*'} to 'LPCRITICAL_SECTION' {aka '_RTL_CRITICAL_SECTION*'}
+  234 |     pthread_mutex_unlock(&LOCK_uuid_generator);
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          pthread_mutex_t* {aka long long int*}
+E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:56:56: note: in definition of macro 'pthread_mutex_unlock'
+   56 | #define pthread_mutex_unlock(A)  (LeaveCriticalSection(A), 0)
+      |                                                        ^
+In file included from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/winbase.h:35,
+                 from E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/windows.h:70,
+                 from E:\cpp\Lib\MySQL\src\cdk\extra\uuid\src\uuid_gen.cc:34:
+E:/Apps/msys64/mingw64/x86_64-w64-mingw32/include/synchapi.h:44:67: note:   initializing argument 1 of 'void LeaveCriticalSection(LPCRITICAL_SECTION)'
+   44 |   WINBASEAPI VOID WINAPI LeaveCriticalSection (LPCRITICAL_SECTION lpCriticalSection);
+      |                                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+mingw32-make[2]: *** [uuid\src\CMakeFiles\uuid_gen.dir\build.make:83: uuid/src/CMakeFiles/uuid_gen.dir/uuid_gen.cc.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\Makefile2:1235: uuid/src/CMakeFiles/uuid_gen.dir/all] Error 2
+mingw32-make: *** [Makefile:149: all] Error 2
