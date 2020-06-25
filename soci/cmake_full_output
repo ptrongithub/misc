@@ -1,0 +1,133 @@
+e:\cpp\Lib\soci\soci-4.0.0\build> cmake -DCMAKE_BUILD_TYPE=Debut -DSOCI_CXX11=ON -DSOCI_SHARED=ON -DWITH_BOOST=ON -DWITH_MYSQL=ON ..
+-- Configuring SOCI:
+-- SOCI_VERSION                             = 4.0.0
+-- SOCI_ABI_VERSION                         = 4_0
+-- SOCI_SHARED                              = ON
+-- SOCI_STATIC                              = ON
+-- SOCI_TESTS                               = ON
+-- SOCI_ASAN                                = OFF
+-- SOCI_CXX11                               = ON
+-- LIB_SUFFIX                               = 64
+-- Looking for SOCI dependencies:
+-- Threads:
+-- CMAKE_THREAD_LIBS_INIT                   =
+-- Boost:
+-- << set CMAKE_INCLUDE_PATH >> E:/cpp/Lib/boost/boost_1_73_0
+-- << set BOOST_ROOT >> E:/cpp/Lib/boost/boost_1_73_0
+-- << FIND_PACKAGE >>
+-- << FIND_PACKAGE COMPONENTS >>
+CMake Warning at E:/Apps/CMake/share/cmake-3.16/Modules/FindBoost.cmake:1161 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  E:/Apps/CMake/share/cmake-3.16/Modules/FindBoost.cmake:1283 (_Boost_COMPONENT_DEPENDENCIES)
+  E:/Apps/CMake/share/cmake-3.16/Modules/FindBoost.cmake:1921 (_Boost_MISSING_DEPENDENCIES)
+  cmake/dependencies/Boost.cmake:18 (FIND_PACKAGE)
+  cmake/SociDependencies.cmake:79 (include)
+  CMakeLists.txt:83 (include)
+
+
+-- Could NOT find Boost (missing: date_time) (found version "1.73.0")
+-- << Boost_FOUND >> FALSE
+-- << Boost_DATE_TIME_FOUND >>0
+-- WARNING: Boost libraries not found, some features will be disabled.
+-- MySQL:
+-- Found MySQL: C:/Program Files/MySQL/MySQL Server 5.7/include, C:/Program Files/MySQL/MySQL Server 5.7/lib/libmysql.lib
+-- MySQL Embedded not found.
+-- MYSQL_INCLUDE_DIR                        = C:/Program Files/MySQL/MySQL Server 5.7/include
+-- MYSQL_LIBRARIES                          = C:/Program Files/MySQL/MySQL Server 5.7/lib/libmysql.lib
+-- ODBC:
+-- ODBC_INCLUDE_DIR                         =
+-- ODBC_LIBRARIES                           = odbc32.lib
+-- Oracle:
+-- ORACLE_HOME=
+-- WARNING: Oracle libraries not found, some features will be disabled.
+-- PostgreSQL:
+CMake Warning (dev) at cmake/dependencies/PostgreSQL.cmake:3 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable PostgreSQL_ROOT is set to:
+
+    C:\Apps\64\PostgreSQL\10
+
+  For compatibility, CMake is ignoring the variable.
+Call Stack (most recent call first):
+  cmake/SociDependencies.cmake:79 (include)
+  CMakeLists.txt:83 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- POSTGRESQL_INCLUDE_DIRS                  = E:/Apps/StrawberryPerl/c/include
+-- POSTGRESQL_LIBRARIES                     = C:/Apps/64/PostgreSQL/10/lib/libpq.lib
+-- POSTGRESQL_VERSION                       = 11.3
+-- SQLite3:
+-- WARNING: SQLite3 libraries not found, some features will be disabled.
+-- Firebird:
+-- SOCI_FIREBIRD_EMBEDDED                   = OFF
+-- WARNING: Firebird libraries not found, some features will be disabled.
+-- DB2:
+-- WARNING: DB2 libraries not found, some features will be disabled.
+-- Configuring SOCI core library:
+-- SOCI_CORE_TARGET                         = soci_core
+-- SOCI_CORE_TARGET_OUTPUT_NAME             = soci_core_4_0
+-- SOCI_CORE_DEPS_LIBS                      =
+-- SOCI_CORE_INCLUDE_DIRS                   = E:/cpp/Lib/soci/soci-4.0.0/build E:/cpp/Lib/soci/soci-4.0.0/include E:/cpp/Lib/soci/soci-4.0.0/build/include E:/cpp/Lib/soci/soci-4.0.0/include/private E:/cpp/Lib/soci/soci-4.0.0/build/src/core
+-- WITH_BOOST                               = ON
+-- COMPILE_DEFINITIONS                      = _CRT_SECURE_NO_DEPRECATE _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNING _SCL_SECURE_NO_WARNINGS SOCI_ABI_VERSION="4_0" DBUG_OFF SOCI_LIB_PREFIX="soci_" SOCI_LIB_SUFFIX=".dll" SOCI_DEBUG_POSTFIX=""
+--
+-- Configuring SOCI backend libraries:
+-- Found MySQL: C:/Program Files/MySQL/MySQL Server 5.7/include, C:/Program Files/MySQL/MySQL Server 5.7/lib/libmysql.lib
+-- MySQL Embedded not found.
+-- ORACLE_HOME=
+CMake Warning (dev) at src/backends/CMakeLists.txt:17 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable PostgreSQL_ROOT is set to:
+
+    C:\Apps\64\PostgreSQL\10
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Empty - SOCI backend skeleton for new backends development
+-- SOCI_EMPTY                               = ON
+-- SOCI_EMPTY_TARGET                        = soci_empty
+-- SOCI_EMPTY_OUTPUT_NAME                   = soci_empty_4_0
+-- SOCI_EMPTY_COMPILE_DEFINITIONS           = _CRT_SECURE_NO_DEPRECATE _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNING _SCL_SECURE_NO_WARNINGS SOCI_ABI_VERSION="4_0" DBUG_OFF DBUG_OFF
+-- SOCI_EMPTY_INCLUDE_DIRECTORIES           = E:/cpp/Lib/soci/soci-4.0.0/build E:/cpp/Lib/soci/soci-4.0.0/include E:/cpp/Lib/soci/soci-4.0.0/build/include E:/cpp/Lib/soci/soci-4.0.0/include/private E:/cpp/Lib/soci/soci-4.0.0/include/private
+-- MySQL - SOCI backend for MySQL
+-- SOCI_MYSQL                               = ON
+-- SOCI_MYSQL_TARGET                        = soci_mysql
+-- SOCI_MYSQL_OUTPUT_NAME                   = soci_mysql_4_0
+-- SOCI_MYSQL_COMPILE_DEFINITIONS           = _CRT_SECURE_NO_DEPRECATE _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNING _SCL_SECURE_NO_WARNINGS SOCI_ABI_VERSION="4_0" DBUG_OFF DBUG_OFF
+-- SOCI_MYSQL_INCLUDE_DIRECTORIES           = E:/cpp/Lib/soci/soci-4.0.0/build E:/cpp/Lib/soci/soci-4.0.0/include E:/cpp/Lib/soci/soci-4.0.0/build/include E:/cpp/Lib/soci/soci-4.0.0/include/private E:/cpp/Lib/soci/soci-4.0.0/include/private C:/Program Files/MySQL/MySQL Server 5.7/include
+-- ODBC - SOCI backend for ODBC
+-- SOCI_ODBC                                = ON
+-- SOCI_ODBC_TARGET                         = soci_odbc
+-- SOCI_ODBC_OUTPUT_NAME                    = soci_odbc_4_0
+-- SOCI_ODBC_COMPILE_DEFINITIONS            = _CRT_SECURE_NO_DEPRECATE _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNING _SCL_SECURE_NO_WARNINGS SOCI_ABI_VERSION="4_0" DBUG_OFF DBUG_OFF
+-- SOCI_ODBC_INCLUDE_DIRECTORIES            = E:/cpp/Lib/soci/soci-4.0.0/build E:/cpp/Lib/soci/soci-4.0.0/include E:/cpp/Lib/soci/soci-4.0.0/build/include E:/cpp/Lib/soci/soci-4.0.0/include/private E:/cpp/Lib/soci/soci-4.0.0/include/private
+-- PostgreSQL - SOCI backend for PostgreSQL
+-- SOCI_POSTGRESQL                          = ON
+-- SOCI_POSTGRESQL_TARGET                   = soci_postgresql
+-- SOCI_POSTGRESQL_OUTPUT_NAME              = soci_postgresql_4_0
+-- SOCI_POSTGRESQL_COMPILE_DEFINITIONS      = _CRT_SECURE_NO_DEPRECATE _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNING _SCL_SECURE_NO_WARNINGS SOCI_ABI_VERSION="4_0" DBUG_OFF DBUG_OFF
+-- SOCI_POSTGRESQL_INCLUDE_DIRECTORIES      = E:/cpp/Lib/soci/soci-4.0.0/build E:/cpp/Lib/soci/soci-4.0.0/include E:/cpp/Lib/soci/soci-4.0.0/build/include E:/cpp/Lib/soci/soci-4.0.0/include/private E:/cpp/Lib/soci/soci-4.0.0/include/private E:/Apps/StrawberryPerl/c/include E:/Apps/StrawberryPerl/c/include
+-- SOCI_POSTGRESQL_NOSINLGEROWMODE          =
+--
+-- Configuring SOCI tests:
+-- SOCI_EMPTY_TEST_CONNSTR                  = dummy
+-- SOCI_MYSQL_TEST_CONNSTR                  = db=soci_test
+-- SOCI_ODBC_TEST_ACCESS_CONNSTR            = FILEDSN=E:/cpp/Lib/soci/soci-4.0.0/tests/odbc/test-access.dsn
+-- SOCI_ODBC_TEST_MSSQL_CONNSTR             = FILEDSN=E:/cpp/Lib/soci/soci-4.0.0/tests/odbc/test-mssql.dsn
+-- SOCI_ODBC_TEST_MYSQL_CONNSTR             = FILEDSN=E:/cpp/Lib/soci/soci-4.0.0/tests/odbc/test-mysql.dsn
+-- SOCI_ODBC_TEST_POSTGRESQL_CONNSTR        = FILEDSN=E:/cpp/Lib/soci/soci-4.0.0/tests/odbc/test-postgresql-win64.dsn
+-- ODBC DB2 test disabled.
+-- SOCI_POSTGRESQL_TEST_CONNSTR             = dbname=soci_test
+--
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/cpp/Lib/soci/soci-4.0.0/build
